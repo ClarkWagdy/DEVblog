@@ -175,7 +175,10 @@ export default   function Page( ) {
                   {Comments.length > 0 &&
                     Comments.map((ele, index) => {
                       return (
-                        <div key={ele.id_code} className="flex space-x-4">
+                        <div
+                          key={ele.id_code + index}
+                          className="flex space-x-4"
+                        >
                           <img
                             src={ele.user.profile_image}
                             alt="User Avatar"
